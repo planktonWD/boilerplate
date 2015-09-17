@@ -1,0 +1,85 @@
+header {
+	background: $highlight--mute;
+	float: left;
+	width: 100%;
+	padding-top: 40px;
+	color: white;
+
+	.huge {
+
+		padding-top: 3em;
+		min-height: 7.5em;
+
+		@include bp(desk) {
+	        padding-top: 1.5em;
+			min-height: 5.5em;
+	    }
+	}
+
+		&.auto-height .huge {
+			min-height: 0 !important;
+		}
+
+	hr {
+		border: solid 1px white;
+	}
+
+	h4 {
+		float: left;
+		width: 100%;
+		color: white;
+		text-align: center;
+
+		a {
+			color: white;
+
+			@include attention() {
+				color: $highlight;
+			}
+		}
+
+		&.active {
+			a {border-bottom: solid 2px white; padding-bottom: 0.2em;color: $highlight;}
+		}
+
+		@include bp(landscape-mobile) {
+	        width: 50%;
+			text-align: left;
+	    }
+
+		@include bp(full-nav) {
+	        width: 33%;
+	    }
+
+		@include bp(portable) {
+	        width: auto;
+			margin-right: 4%;
+			@include font-size(12px);
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+	    }
+
+		@include bp(small-desk) {
+	        @include font-size(14px);
+			margin-right: 3.2%;
+
+	    }
+
+		@include bp(desk) {
+	        margin-right: 6%;
+			@include font-size(15px);
+
+	    }
+
+	}
+
+	&.bg-image .huge {
+
+		@include bp(desk) {
+	        padding-top: 2em;
+
+	    }
+	}
+}
